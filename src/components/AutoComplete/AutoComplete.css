@@ -15,6 +15,7 @@
   width: 300px;
 }
 
-.autocomplete__predictions li {
+.autocomplete__prediction {
   list-style: none;
+  padding: 5px 0;
 }

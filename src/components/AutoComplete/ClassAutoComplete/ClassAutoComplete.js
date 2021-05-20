@@ -1,7 +1,7 @@
+// @Vendors
 import React from 'react';
-import './AutoComplete.css';
 
-export default class AutoComplete extends React.Component {
+export default class ClassAutoComplete extends React.Component {
   constructor(props) {
     super(props);
 
@@ -17,6 +17,7 @@ export default class AutoComplete extends React.Component {
   }
 
   fetchData = async () => {
+    // I decided to use https://jsonplaceholder.typicode.com/ to fetch the mocked data
     await fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => response.json())
       .then(json => this.setState({ data: json }));
@@ -61,7 +62,8 @@ export default class AutoComplete extends React.Component {
     const list = !!predictions.length && this.renderList();
 
     return (
-      <section className="autocomplete">
+      <section className="class-autocomplete">
+        <h3>Class Component AutoComplete</h3>
         <input
           className="autocomplete__input"
           onChange={this.filterData}

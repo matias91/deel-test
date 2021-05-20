@@ -1,13 +1,20 @@
+// @Vendors
 import React from 'react';
-import './App.css';
 
-import AutoComplete from './components/AutoComplete/AutoComplete';
+// @Styles
+import './App.css';
+import './components/AutoComplete/AutoComplete.css';
+
+import ClassAutoComplete from './components/AutoComplete/ClassAutoComplete/ClassAutoComplete';
+import FunctionalAutoComplete from './components/AutoComplete/FunctionalAutoComplete/FunctionalAutoComplete';
 
 export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <AutoComplete />
+        <ClassAutoComplete />
+
+        <FunctionalAutoComplete />
       </div>
     );
   }
